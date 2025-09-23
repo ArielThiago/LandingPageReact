@@ -1,0 +1,385 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Reset básico para evitar margens padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  width: 100vw;
+  background-color: darkblue;
+  padding: 0rem 2rem; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           
+  color: white;
+}
+
+/* Agrupamento dos títulos */
+header .titulos {
+  display: flex;
+  flex-direction: column; 
+  gap: 0.3rem;            
+}
+
+header .titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header .titulo1 {
+  font-size: 1.5rem;
+  opacity: 0.85;
+}
+
+/* Agrupamento dos links */
+header .botoes {
+  display: flex;
+  gap: 1rem; 
+}
+
+header .ancora {
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #18015c;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header .ancora:hover {
+  background-color: #0d0036;
+  color: lightblue; 
+}
+
+.hero {
+  background-image: url("https://img.freepik.com/vetores-gratis/particle-de-tecnologia-abstrata-realista-de-fundo_23-2148431735.jpg");
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  min-height: 100vh;            
+  display: flex;
+  justify-content: center;      
+  align-items: center;          
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Overlay escuro para dar contraste no texto */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 1; /* coloca acima do overlay */
+  padding: 1rem; /* Adiciona espaçamento interno */
+}
+
+.hero .titulo {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Aumenta o espaçamento abaixo do título */
+  line-height: 1.3;
+}
+
+.titulo1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem; /* Garante espaçamento abaixo do título 1 */
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: center; /* Ajusta o texto para ocupar toda a largura */
+}
+
+.hero .ancora {
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #2e00b7;
+  padding: 0.75rem 1.5rem; /* Aumenta o tamanho do botão */
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Garante que o botão seja tratado como bloco inline */
+  margin-top: 1rem; /* Adiciona espaçamento acima do botão */
+}
+
+.hero .ancora:hover {
+  background-color: #1c0077;
+}
+
+/* Container principal */
+.section-destaque {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  justify-content: center;  
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #0a0a2a, #1a1a3d);
+  color: white;
+  min-height: 100vh;        
+}
+
+
+
+/* Texto abaixo do botão */
+.section-destaque .titulo1 {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Contagem regressiva */
+.countdown-card {
+  background-color: #2f2f33;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem auto; /* centralização horizontal */
+}
+
+.countdown-card {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.countdown-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Container geral da agenda */
+#agenda {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Container da lista de eventos */
+.agenda-container {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* coluna 1: horários, coluna 2: eventos */
+  gap: 1rem 2rem; /* espaçamento vertical e horizontal */
+  max-width: 800px;
+  margin: 2rem auto; /* centraliza horizontal */
+  background-color: rgba(0, 0, 50, 0.7); /* leve fundo azul escuro */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Estilização dos horários */
+.agenda-container > div:nth-child(odd) {
+  font-weight: bold;
+  color: #ffffff; /* amarelo para destaque */
+  text-align: right;
+}
+
+/* Estilização dos eventos */
+.agenda-container > div:nth-child(even) {
+  color: #fff;
+}
+
+.ver-detalhes {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ver-detalhes:hover {
+  background-color: #0056b3;
+}
+
+.countdown-details {
+  margin-top: 10px;
+}
+
+.countdown-time {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.cards {
+  display: flex;              /* ativa flexbox */
+  flex-direction: row;        /* cards lado a lado */
+  justify-content: center;    /* centraliza horizontalmente */
+  gap: 2rem;                  /* espaço entre os cards */
+  flex-wrap: wrap;            /* quebra linha em telas menores */
+  margin-top: 2rem;
+}
+
+/* Ajuste do card para largura fixa ou máxima */
+.speaker-card {
+  display: flex;
+  flex-direction: column;    /* conteúdo interno vertical */
+  align-items: center;       /* centraliza o conteúdo interno */
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 250px;              /* largura fixa para todos os cards */
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px); /* leve elevação no hover */
+}
+
+/* Imagem */
+.speaker-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.speaker-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Conteúdo textual */
+.speaker-card h2.speaker-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.speaker-card p.speaker-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* Botão */
+.speaker-card .ver-detalhes {
+  background-color: #18015c;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-card .ver-detalhes:hover {
+  background-color: #0d0036;
+}
+
+#palestra {
+  font-size: 3rem;
+  margin: 1rem auto; /* Centraliza horizontalmente */
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Estilo geral do formulário */
+#inscricao {
+  background-color: #1a1a3d;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo dos grupos de entrada */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo do checkbox */
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-checkbox-input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.form-checkbox-label {
+  font-size: 0.9rem;
+}
+
+/* Estilo do botão */
+.form-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
