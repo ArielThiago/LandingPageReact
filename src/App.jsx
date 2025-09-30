@@ -142,6 +142,11 @@ function App() {
       </div>
 
       <Weather />
+
+      <footer>
+        <p>© 2025 TechForward. Todos os direitos reservados.</p>
+      </footer>
+      
     </>
   );
 }

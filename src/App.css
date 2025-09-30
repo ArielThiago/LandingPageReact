@@ -1,6 +1,7 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 /* Reset básico para evitar margens padrões */
@@ -12,7 +13,6 @@
 
 
 header {
-  width: 100vw;
   background-color: darkblue;
   padding: 0rem 2rem; 
   display: flex;
@@ -382,4 +382,65 @@ header .ancora:hover {
 
 .form-button:hover {
   background-color: #0056b3;
+}
+
+/* Weather.css */
+.weather-card {
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #0d0036;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.weather-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weather-icon {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.weather-info {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.weather-error {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffdddd;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: darkblue;
+  padding: 1rem 2rem; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;           
+  color: white;
+  margin-top: 2rem;
 }
